@@ -1,0 +1,15 @@
+package com.dbconnection.exmple;
+import java.sql.*;
+public class DBConnection {
+
+	public static void main(String[] args)throws Exception {
+		Class.forName("oracle.jdbc.driver.OracleDriver");  
+		Connection con = DriverManager.getConnection("jdbc:oracle:thin:@localhost:1521:xe","puru1","puru123");
+		Statement stmt=con.createStatement(); 
+		int rs=stmt.executeUpdate("Insert into EmployeeRecord (E_id,Ename,Salary)values(111,'Ganesh',12000)");  
+		while(rs>0){  
+			System.out.println("Record Inserted Succesfuly");  
+			}  
+	}
+
+}

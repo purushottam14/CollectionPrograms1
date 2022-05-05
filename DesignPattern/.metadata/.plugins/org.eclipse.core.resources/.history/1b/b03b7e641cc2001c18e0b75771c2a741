@@ -1,0 +1,10 @@
+package com.comparator.example;
+import java.util.*;
+import java.util.Comparator;
+
+static class EmployeeMain1 implements Comparator {
+public int compare(Employee e1,Employee e2) {
+	
+}	
+
+}

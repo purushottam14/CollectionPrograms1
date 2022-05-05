@@ -1,0 +1,30 @@
+import java.util.*;
+import java.util.List;
+import java.lang.*;
+
+public class Employee {
+	
+	int eid;
+	String ename;
+	float salary;
+	String dept;
+	
+	public Employee(int eid, String ename, float salary, String dept) {
+		
+		this.eid = eid;
+		this.ename = ename;
+		this.salary = salary;
+		this.dept = dept;
+	}
+
+}
+class Main {
+	
+	public static void main(String [] args) {
+		List<String> al= new ArrayList<String>();
+		al.add(new Employee(101,"Avinash",10000,"Manager"));
+		
+		
+	}
+}
+

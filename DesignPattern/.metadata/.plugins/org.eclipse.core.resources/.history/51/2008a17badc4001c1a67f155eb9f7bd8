@@ -1,0 +1,72 @@
+import java.util.HashMap;
+import java.util.Iterator;
+import java.util.Map;
+import java.util.Map.Entry;
+import java.util.Set;
+
+public class HashMapDemo {
+
+	public static void main(String[] args) {
+		System.out.println("Hello welcocme to collection programmig");
+		//HashMap hm = new HashMap();
+		HashMap<Integer, String> hm = new HashMap<Integer, String>();
+		
+		hm.put(101, "Tushar");
+		hm.put(102, "Akshay");
+		hm.put(103, "Vinod");
+		hm.put(104,"Nareandra");
+		hm.put(103,"xtream");//duplicates not allow if you try to put duplicate key then it will replace new value with previous value
+		System.out.println("This is map entry :" + hm);
+		System.out.println("This is the value of perticular value :"+hm.get(102));
+		//remove pair from hashmap
+		//System.out.println(hm.remove(104));
+		//System.out.println(hm.get(104));//get the value of perticular key
+		System.out.println(hm);
+		
+		System.out.println(hm.containsKey(101));//this method return true if perticular key is in map otherwise returns false.
+		System.out.println(hm.containsValue("xtream"));//this method return true if perticular key is in map otherwise returns false.
+		
+		 System.out.println(hm.isEmpty());//return true if map empty otherwise return true if map contain value
+		
+		System.out.println(hm.keySet());//returns all the keys as set [101, 102, 103, 104]
+		
+		System.out.println(hm.values());//returns all values as collection // [101, 102, 103, 104]
+		
+		System.out.println(hm.entrySet());//returns all the entries as set [101=Tushar, 102=Akshay, 103=xtream, 104=Nareandra]
+		
+		System.out.println("==============================================\n");
+		
+		System.out.println("iterate each key one-by-one");
+		for(Object i: hm.keySet()) {
+			System.out.println(i);
+		}
+		System.out.println("Iterate each  value one-by-one");
+		for(Object i:hm.values()) {
+			System.out.println(i);
+		}
+		System.out.println("Iterate each entryset one -by-one");
+		for(Object i: hm.entrySet()) {
+			System.out.println(i);
+		}
+		System.out.println("Print keys and values in combination using keySet");
+		for(Object i:hm.keySet()) {
+			System.out.println(i+" "+hm.get(i)); 
+		}
+		//Entry Methods
+		System.out.println("=============================================");
+		System.out.println("Entry methods");
+			for(Map.Entry entry: hm.entrySet()) {
+				System.out.println(entry.getKey()+" "+entry.getValue());
+			}
+			System.out.println("\n============================================\n");
+		//	iterator()
+			System.out.println("Iterator Mathod");
+			Set s= hm.entrySet();
+			Iterator itr = s.iterator();
+			while(itr.hasNext()) {
+				Map.Entry entry =(Entry) itr.next();//
+				System.out.println(entry.getKey()+" "+entry.getValue());
+			}
+	}
+
+}

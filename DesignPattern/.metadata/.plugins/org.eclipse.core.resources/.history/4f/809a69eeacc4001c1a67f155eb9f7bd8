@@ -1,0 +1,22 @@
+import java.util.*;
+public class HashMapDemo {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		mport java.util.HashMap;
+		import java.util.Iterator;
+		import java.util.Map;
+		import java.util.Map.Entry;
+		import java.util.Set;
+
+		
+				HashMap<Integer, String> hm = new HashMap<Integer, String>();
+				
+				hm.put(101, "Tushar");
+				hm.put(102, "Akshay");
+				hm.put(103, "Vinod");
+				hm.put(104,"Nareandra");
+		
+	}
+
+}

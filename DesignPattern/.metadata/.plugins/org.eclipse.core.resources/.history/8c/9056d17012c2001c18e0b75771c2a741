@@ -1,0 +1,8 @@
+package com.comparator.example;
+
+import java.util.Comparator;
+
+static class EmployeeMain1 implements Comparator<EmployeeRecord> {
+public int compare() {}	
+
+}

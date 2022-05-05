@@ -1,0 +1,32 @@
+import java.util.HashMap;
+import java.util.Iterator;
+import java.util.Map;
+import java.util.Map.Entry;
+import java.util.Set;
+
+public class HashMapDemo {
+
+	public static void main(String[] args) {
+		System.out.println("Hello welcocme to collection programmig");
+		//HashMap hm = new HashMap();
+		HashMap<Integer, String> hm = new HashMap<Integer, String>();
+		
+		hm.put(101, "Tushar");
+		hm.put(102, "Akshay");
+		hm.put(103, "Vinod");
+		hm.put(104,"Nareandra");
+		hm.put(103,"xtream");//duplicates not allow if you try to put duplicate key then it will replace new value with previous value
+		System.out.println("This is map entry :" + hm);
+		System.out.println("This is the value of perticular value :"+hm.get(102));
+		
+		//	iterator()
+			System.out.println("Iterator Mathod");
+			Set s= hm.entrySet();
+			Iterator itr = s.iterator();
+			while(itr.hasNext()) {
+				Map.Entry entry =(Entry) itr.next();//
+				System.out.println(entry.getKey()+" "+entry.getValue());
+			}
+	}
+
+}

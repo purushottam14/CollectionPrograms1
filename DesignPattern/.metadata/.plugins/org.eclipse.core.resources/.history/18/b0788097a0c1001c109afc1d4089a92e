@@ -1,0 +1,35 @@
+import java.util.ArrayList;
+import java.util.List;
+import java.lang.*;
+
+public class Employee {
+	
+	int eid;
+	String ename;
+	float salary;
+	String dept;
+	
+	public Employee(int eid, String ename, float salary, String dept) {
+		
+		this.eid = eid;
+		this.ename = ename;
+		this.salary = salary;
+		this.dept = dept;
+	}
+		
+	public String toString() {
+		return "Employee["+this.eid+" ,"+this.ename+" ,"+this.salary+" ,"+this.dept+"]";
+}
+class Main {
+	
+	public static void main(String [] args) {
+		List<Employee> al= new ArrayList<Employee>();
+		al.add(new Employee(101,"Avinash Arade",10000,"Manager"));
+		al.add(new Employee(120,"Prathmesh Joshi",2000,"Hr"));
+		al.add(new Employee(111,"Kaivalya Vaidya",13000,"Testor"));
+		al.add(new Employee(121,"Nikhil Gorde",1400,"Hr"));
+		
+		
+	}
+}
+
